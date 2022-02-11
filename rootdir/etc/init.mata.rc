@@ -665,6 +665,11 @@ service rmt_storage /vendor/bin/rmt_storage
     shutdown critical
     ioprio rt 0
 
+service rfs_access /vendor/bin/rfs_access
+   class core
+   user root
+   group system net_raw
+
 service tftp_server /vendor/bin/tftp_server
    class core
    user root
